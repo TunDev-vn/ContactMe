@@ -242,6 +242,28 @@ section .spaceship {
 
 /* setup for mobile phone */
 @media (max-width: 800px) {
+    section .spaceship {
+        display: flex;
+        position: absolute;
+        margin-bottom: 460px;
+        scale: 0.15;
+        animation: spaceship-move 5s linear infinite;
+    }
+    @keyframes spaceship-move {
+        0% {
+            transform: translateX(calc(120% + 100vw));
+        }
+        50% {
+            transform: translateX(calc(-120% - 100vw));
+        }
+        50.01% {
+            transform: translateX(calc(-120% - 100vw))rotateY(180deg)
+        }
+        100% {
+            transform: translateX(calc(120% + 100vw))rotateY(180deg)
+        }
+    }
+
     .personal-card {
         position: relative;
         padding: 30px 5px;
