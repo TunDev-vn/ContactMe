@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+::selection {
+    background-color: rgb(26,0,102);
+    color: white;
+}
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+section .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.before, .between {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 100;
+    pointer-events: none;
+}
+section .spaceship {
+    display: flex;
+    position: absolute;
+    margin-bottom: 460px;
+    scale: 0.15;
+    animation: spaceship-move 10s linear infinite;
+}
+@keyframes spaceship-move {
+    0% {
+        transform: translateX(calc(200% + 100vw));
+    }
+    50% {
+        transform: translateX(calc(-200% - 100vw));
+    }
+    50.01% {
+        transform: translateX(calc(-200% - 100vw))rotateY(180deg)
+    }
+    100% {
+        transform: translateX(calc(200% + 100vw))rotateY(180deg)
+    }
+}
+.personal-card {
+    position: relative;
+    padding: 40px 20px;
+    width: 500px;
+    background-color: rgba(255,255,255,0.25);
+    backdrop-filter: blur(15px);
+    border: 1px solid #fff;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.5);
+    border-radius: 2px;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    margin: 0px 40px;
+}
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.avatar img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 0px 10px rgba(84, 70, 192, 0.6);
+}
+.position {
+    margin-top: 25px;
+    margin-bottom: 8px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(39, 1, 154);
+    font-size: 25px;
+}
+.introduction {
+    padding: 0px 10px ;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+.social-media-link {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    padding: 20px;
+    justify-content: space-around;
+}
+.social-media-link img {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    border-radius: 17px;
+    opacity: 0.7;
+    transition: opacity 0.2s, width 0.2s, height 0.2s, margin 0.2s;
+    cursor: pointer;
+}
+.social-media-link img:hover {
+    opacity: 0.85;
+    width: 70px;
+    height: 70px;
+    margin: 0px;
+}
+.social-media-link img:active {
+    opacity: 0.95;
+    background-color: rgba(46, 2, 179,0.5);
+}
+.meteors {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    pointer-events: none;
+}
+.meteors .set {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+.meteors .set div {
+    position: absolute;
+    display: block;
+}
+.meteors .set div img {
+    width: 150px;
+    opacity: 0.7;
+}
+/* top lv4 */
+.meteors .set div:nth-child(3) {
+    left: 120%;
+    animation: animate3 3s linear 2s infinite;
+}
+.meteors .set div:nth-child(4) {
+    left: 110%;
+    animation: animate3 2s linear 3s infinite;
+}
+@keyframes animate3 {
+    0% {
+        top: 20%;
+        right: -10%;
+    }
+    100% {
+        top: 120%;
+        left: 15%;
+    }
+}
+/* top lv3 */
+.meteors .set div:nth-child(1) {
+    left: 100%;
+    animation: animate1 4s linear infinite;
+}
+.meteors .set div:nth-child(2) {
+    left: 90%;
+    animation: animate1 3s linear infinite;
+}
+@keyframes animate1 {
+    0% {
+        top: -10%;
+        right: -10%;
+    }
+    100% {
+        top: 110%;
+        left: -20%;
+    }
+}
+/* top lv2 */
+.meteors .set div:nth-child(5) {
+    /* width: 40%; */
+    left: 70%;
+    animation: animate2 2s linear infinite;
+}
+.meteors .set div:nth-child(6) {
+    /* width: 60%; */
+    left: 75%;
+    top: -20%;
+    animation: animate2 1.5s linear 1s infinite;
+}
+@keyframes animate2 {
+    0% {
+        top: -20%;
+        right: 40%;
+    }
+    100% {
+        top: 70%;
+        left: -10%;
+    }
+}
+/* top lv1 */
+.meteors .set div:nth-child(7) {
+    /* width: 50%; */
+    left: 30%;
+    top: -10%;
+    animation: animate4 1s linear infinite;
+}
+.meteors .set div:nth-child(8) {
+    /* width: 40%; */
+    left: 35%;
+    top: -20%;
+    animation: animate4 1.5s linear 2s infinite;
+}
+@keyframes animate4 {
+    0% {
+        top: -20%;
+        left: 30%;
+    }
+    100% {
+        top: 30%;
+        left: -10%;
+    }
+}
+@media (max-width: 800px) {
+    .personal-card {
+        padding: 40px 5px;
+    }
+    .meteors .set div img {
+        width: 100px;
+        opacity: 0.7;
+    }
+    /* top lv4 */
+    .meteors .set div:nth-child(3) {
+        left: 110%;
+        top: 70%;
+        animation: animate3 3s linear 1s infinite;
+    }
+    .meteors .set div:nth-child(4) {
+        width: 90px;
+        left: 100%;
+        top: 55%;
+        animation: animate3 2.5s linear 2s infinite;
+    }
+    @keyframes animate3 {
+        0% {
+            top: 50%;
+            right: 0%;
+        }
+        100% {
+            top: 90%;
+            left: -10%;
+        }
+    }
+    /* top lv3 */
+    .meteors .set div:nth-child(1) {
+        left: 100%;
+        top: 60%;
+        animation: animate1 2s linear 1.3s infinite;
+    }
+    .meteors .set div:nth-child(2) {
+        left: 110%;
+        top: 70%;
+        animation: animate1 2.4s linear infinite;
+    }
+    @keyframes animate1 {
+        0% {
+            top: 30%;
+            right: 0%;
+        }
+        100% {
+            top: 70%;
+            left: -10%;
+        }
+    }
+    /* top lv2 */
+    .meteors .set div:nth-child(5) {
+        left: 110%;
+        top: 10%;
+        animation: animate2 2s linear infinite;
+    }
+    .meteors .set div:nth-child(6) {
+        left: 100%;
+        animation: animate2 1.5s linear 1s infinite;
+    }
+    @keyframes animate2 {
+        0% {
+            top: -10%;
+        }
+        100% {
+            top: 40%;
+            left: -10%;
+        }
+    }
+    /* top lv1 */
+    .meteors .set div:nth-child(7) {
+        left: 70%;
+        top: -10%;
+        animation: animate4 1s linear infinite;
+    }
+    .meteors .set div:nth-child(8) {
+        left: 65%;
+        top: -20%;
+        animation: animate4 1.5s linear 2s infinite;
+    }
+    @keyframes animate4 {
+        0% {
+            top: -20%;
+        }
+        100% {
+            top: 20%;
+            left: -10%;
+        }
+    }
+}
